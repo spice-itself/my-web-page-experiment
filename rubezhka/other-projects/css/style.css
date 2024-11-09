@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* Чтоб маргины и паддинги не мешали */
+* {
+    box-sizing: border-box;
+}
+
+/* Для серого бг */
+.bg-gray {
+    background-color: gray;
+}
+
+/* Для красного бг */
+.bg-blue {
+    background-color: blue;
+}
+
+/* Для определения высоты элементов */
+.h-50 {
+    height: 50px;
+}
+
+/* ALBS - A Little Bit smaller (чуть поменьше) */
+.h-albs {
+    height: 90%;
+}
+
+/* Для определения адаптивной ширины элекментов */
+.w-adapt-vw {
+    width: 50vw;
+}
+
+/* Для определения заполнения элементами свободного пространства */
+.w-fill {
+    width: 100%;
+}
+
+/* Для задания автоматической ширины */
+.w-auto {
+    width: auto;
+}
+
+/* Квадратный ALBS */
+.ialbs {
+    height: 90%; aspect-ratio: 1/1;
+}
+
+/* Добавление маленького маргина */
+.lil-margin {
+    margin: 5px;
+}
+
+/* Для задания флекс-контейнеров */
+.flex-container {
+    display: flex;
+}
+
+/* Для центрирования контента по направлению row */
+.flex-row-centered {
+    justify-content: center;
+}
+
+/* Для задания шрифта */
+.f-roboto-mono {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.no-txt-decor {
+    text-decoration: none;
+}
+
+/* Центрирование глобального контейнера */
+#whole-website-container {
+    margin: auto;
+}
+
+/* Задание шрифта всем элементам списка */
+.list li {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+}
+
+#myinput {
+    padding-left: 20px;
+}
+/* Задание шрифта плейсхолдера поисковика */
+#myinput::placeholder {
+    font-size: large;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Реализация анимации */
+@keyframes animka-moya-preletj {
+    from {
+        transform: rotate(0deg);
+        color: red;
+    }
+    10% {
+        transform: rotate(36deg);
+        color: orange;
+    }
+    20% {
+        transform: rotate(72deg);
+        color: yellow;
+    }
+    30% {
+        transform: rotate(108deg);
+        color: lime;
+    }
+    40% {
+        transform: rotate(144deg);
+        color: turquoise;
+    }
+    50% {
+        transform: rotate(180deg);
+        color: blue;
+    }
+    60% {
+        transform: rotate(226deg);
+        color: magenta;
+    }
+    70% {
+        transform: rotate(262deg);
+        color: purple;
+    }
+    80% {
+        transform: rotate(298deg);
+        color: white;
+    }
+    90% {
+        transform: rotate(324deg);
+        color: black;
+    }
+    to {
+        transform: rotate(360deg);
+        color: red;
+    }
+    
+}
+
+/* Применение анимации */
+.animka {
+    animation: animka-moya-preletj 1s infinite;
+    font-size: xx-large;
+}
+
+/* Вправка анимации */
+#animka-box {
+    text-align: center;
+    margin: 100px;
+    height: 200px;
+}
+
+/* Адаптив для экранов с меньшей шириной */
+@media screen and (max-width: 1340px) {
+    .w-adapt-vw {
+        width: 70vw;
+    }
+}
+
+/* адаптив для экранов с меньшей высотой */
+@media screen and (max-height: 810px) {
+    .w-adapt-vw {
+        width: 70vw;
+    }
+}
+
+/* Адаптив для экранов телефонов */
+@media screen and (max-width: 420px) and (max-height: 768px) {
+    .w-adapt-vw {
+        width: 90vw;
+    }
+}
+

@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+      box-sizing: border-box;
+}
+
+:root {
+      --size-1: 40px;
+      --width-1: 60vw;
+}
+
+nav {
+      display: flex;
+      gap: 10px;
+      height: var(--size-1);
+}
+
+nav #logo {
+      height: var(--size-1);
+      width: var(--size-1);
+}
+
+nav #command-line {
+      height: var(--size-1);
+      padding: 10px;
+      width: 100%;
+}
+
+.main-container {
+      margin: auto;
+      width: var(--width-1);
+}
+
+.some-row {
+      display: flex;
+      gap: 10px;
+      height: 300px;
+}
+
+h2, h3, p, a, li {
+      font-family: "JetBrains Mono", monospace;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+}
+
+.paragraph {
+      display: block;
+      height: 100%;
+}
+
+.std-button {
+      display: block;
+      border: solid blue 1px;
+      border-radius: 5px;
+      width: 120px;
+      text-decoration: none;
+      text-align: center;
+      color: black;
+      margin: auto;
+}
+
+.section-type-a {
+      width: 40%;
+      border: solid black 1px;
+      border-radius: 10px;
+}
+
+.section-type-b {
+      width: 60%;
+      border: solid black 1px;
+      border-radius: 10px;
+}
+
+.section-type-a, .section-type-b {
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+}
+
+@media screen and (max-width: 1279px), (max-height: 719px) {
+      .main-container {
+            width: 80vw;
+      }
+      .some-row {
+            height: auto;
+      }
+      .section-type-a, .section-type-b {
+            width: 100%;
+      }
+}
+
+@media screen and (max-width: 420px), (max-height: 768px) {
+      .main-container {
+            width: 90vw;
+      }
+      .some-row {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            height: auto;
+      }
+      .section-type-a, .section-type-b {
+            width: 100%;
+      }
+}

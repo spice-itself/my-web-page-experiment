@@ -1,0 +1,50 @@
+:root {
+      --rel-size: 60vw;
+}
+* {
+      box-sizing: border-box;
+}
+body {
+      background-color: black;
+}
+#everything-container {
+      margin: auto;
+      width: var(--rel-size);
+}
+h1, p {
+      color: aliceblue;
+      margin: 70px 0;
+}
+h1 {
+      text-align: center;
+}
+p {
+      font-size: large;
+}
+#cats-container {
+      width: 100%;
+      text-align: center;
+}
+#cats-container img {
+      position: relative;
+      margin: 3px;
+      height: calc(50% - 8px);
+      width: calc(50% - 8px);
+      transition: 0.2s;
+}
+#cats-container img:hover {
+      transform: scale(1.03);
+}
+
+@media screen and (max-width: 420px), (max-height: 768px) {
+      :root {
+            --rel-size: 90vw;
+      }
+      #cats-container img {
+            position: relative;
+            margin: 1px;
+            height: calc(50% - 4px);
+            width: calc(50% - 4px);
+            transition: 0.2s;
+      }
+}
