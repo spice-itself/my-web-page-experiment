@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./css/style.css">
+      <title>Менеджер Проектов</title>
+</head>
+
+<body>
+      <div class="main-container">
+            <nav>
+                  <img id="logo" src="./img/159604.png" alt="logo">
+                  <input id="command-line" type="text" placeholder="command">
+            </nav>
+            <section>
+                  <section class="direction">
+                        <h2>Проекты</h2>
+                        <section class="some-row">
+                              <section class="section-type-a">
+                                    <h3>Про мою личность</h3>
+                                    <div class="paragraph">
+                                          <p>
+                                                Прочитайте о моей личности ниже по ссылке.
+                                                Узнайте кто я.
+                                          </p>
+                                    </div>
+                                    <a href="./other-projects/index.html" class="std-button">Personality index.html</a>
+                              </section>
+                              <section class="section-type-b">
+                                    <h3>Про мои любимые породы кошек</h3>
+                                    <div class="paragraph">
+                                          <p>
+                                                Почитайте о 4 моих любимых породах кошек.
+                                                Узнайте мои предпочтения в породах кошек
+                                          </p>
+                                    </div>
+                                    <a href="./other-projects/project2/index.html" class="std-button">Cat breeds
+                                          index.html</a>
+                              </section>
+                        </section>
+                  </section>
+                  <section class="direction">
+                        <h2>Разные вещи</h2>
+                        <section class="some-row">
+                              <section class="section-type-b">
+                                    <h3>Мой любимый линукс - Artix Linux</h3>
+                                    <div class="paragraph">
+                                          <p>
+                                                Грубо говоря, это тот же Arch Linux, но уже без systemd и предлагающая
+                                                большую возможность настроек и персонализации.
+                                                Например я бы выбрал OpenRC как систему инициализации и dwm как оконный
+                                                менеджер.
+                                          </p>
+                                    </div>
+                                    <a href="https://artixlinux.org/" class="std-button">Artix Linux</a>
+                              </section>
+                              <section class="section-type-a">
+                                    <h3>Моя религия</h3>
+                                    <div class="paragraph">
+                                          <p>
+                                                Я придерживаюсь Сатанизма ЛаВея. Это атеистическая философия которую
+                                                основал
+                                                ЛаВей и создан для тех,
+                                                кто ценит свободу в мышлении. Сатана тут только символ и не является
+                                                объектом
+                                                поклонения.
+                                          </p>
+                                    </div>
+                                    <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D1%82%D0%B0%D0%BD%D0%B8%D0%B7%D0%BC_%D0%9B%D0%B0%D0%B2%D0%B5%D1%8F" class="std-button">Сатанизм ЛаВея (википедия)</a>
+                              </section>
+                        </section>
+                  </section>
+                  <h3>
+                        Команды
+                  </h3>
+                  <ul>
+                        <li>cat_breeds - переход на страницу с породами кошек.</li>
+                        <li>personality - переход на страницу с инфой о моей личности.</li>
+                        <li>artixlinux - переход на страницу Artix Linux</li>
+                        <li>laveyan_satanism - переход на страницу википедиа о Сатанизме ЛаВея.</li>
+                  </ul>
+            </section>
+      </div>
+      <script>
+
+            const command_input = document.getElementById("command-line");
+
+            function search() {
+                  let the_command = command_input.value.trim();
+                  switch (the_command) {
+
+                        case "personality":
+                              window.location.href = "./other-projects/index.html";
+                              command_input.value = "";
+                              command_input.placeholder = "command [0]";
+                              break;
+
+                        case "cat_breeds":
+                              window.location.href = "./other-projects/project2/index.html";
+                              command_input.value = "";
+                              command_input.placeholder = "command [0]";
+                              break;
+
+                        case "artixlinux": 
+                              window.location.href = "https://artixlinux.org/";
+                              command_input.value = "";
+                              command_input.placeholder = "command [0]";
+                              break;
+
+                        case "laveyan_satanism": 
+                              window.location.href = "https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D1%82%D0%B0%D0%BD%D0%B8%D0%B7%D0%BC_%D0%9B%D0%B0%D0%B2%D0%B5%D1%8F";
+                              command_input.value = "";
+                              command_input.placeholder = "command [0]";
+                              break;
+
+                        default:
+                              command_input.value = "";
+                              command_input.placeholder = "command [127]";
+                              break;
+                  }
+            }
+            
+            command_input.addEventListener("keydown", function(event) {
+                  if (event.key === "Enter") {
+                      search();
+                  }
+            });
+
+      </script>
+</body>
+
+</html>
